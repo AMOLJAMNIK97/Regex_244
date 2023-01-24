@@ -52,10 +52,30 @@ namespace RegularExpressions
         Regex EmailID = new Regex("^[0-9A-Za-z]+([.][0-9A-Za-z]+)[@][0-9A-Za-z]+.[a-zA-Z]{2,3}(.[a-zA-Z]{2})$");
         public void CheckEmailId()
         {
-            Console.WriteLine("Enter Last Name");
+            Console.WriteLine("Enter Eamil ID ");
             var data = Console.ReadLine();
 
             if (EmailID.IsMatch(data))
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine(data + " is Valid");
+                Console.ResetColor();
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine(data + " is Not Valid");
+                Console.ResetColor();
+            }
+
+        }
+        Regex PhoneNumber = new Regex("^[6-9]{1}[0-9]{9}$");
+        public void CheckPhoneNumber()
+        {
+            Console.WriteLine("Enter Phone Number ");
+            var data = Console.ReadLine();
+
+            if (PhoneNumber.IsMatch(data))
             {
                 Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine(data + " is Valid");
