@@ -89,5 +89,25 @@ namespace RegularExpressions
             }
 
         }
+        Regex Pass = new Regex("^[0-9A-Za-z]{8,}$");
+        public void PassWord()
+        {
+            Console.WriteLine("Enter PassWord ");
+            var data = Console.ReadLine();
+
+            if (Pass.IsMatch(data))
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine(data + " is Valid");
+                Console.ResetColor();
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine(data + " is Not Valid");
+                Console.ResetColor();
+            }
+
+        }
     }
 }
