@@ -89,7 +89,7 @@ namespace RegularExpressions
             }
 
         }
-        Regex Pass = new Regex("^[0-9A-Za-z]{8,}$");
+        Regex Pass = new Regex("^[A-Z]{1}[0-9A-Za-z]{8,}$");
         public void PassWord()
         {
             Console.WriteLine("Enter PassWord ");
