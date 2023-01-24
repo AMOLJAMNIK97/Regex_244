@@ -49,5 +49,25 @@ namespace RegularExpressions
             }
 
         }
+        Regex EmailID = new Regex("^[0-9A-Za-z]+([.][0-9A-Za-z]+)[@][0-9A-Za-z]+.[a-zA-Z]{2,3}(.[a-zA-Z]{2})$");
+        public void CheckEmailId()
+        {
+            Console.WriteLine("Enter Last Name");
+            var data = Console.ReadLine();
+
+            if (EmailID.IsMatch(data))
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine(data + " is Valid");
+                Console.ResetColor();
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine(data + " is Not Valid");
+                Console.ResetColor();
+            }
+
+        }
     }
 }
