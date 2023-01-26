@@ -14,7 +14,7 @@ namespace RegularExpressions
         {
             Console.WriteLine("Welcome to Regular Expressions Program");
             RegularExpressions regular = new RegularExpressions();
-            Console.WriteLine("1.Enter the First Name \n2.Enter the Last Name\n3.Email ID\n4.Enter Phone Number\n5.Enter PassWord \n6.Pass Rule4");
+            Console.WriteLine("1.Enter the First Name \n2.Enter the Last Name\n3.Email ID\n4.Enter Phone Number\n5.Enter PassWord \n6.Pass Rule4\n7.Check Email vaild");
             int Option = Convert.ToInt32(Console.ReadLine());
             switch (Option)
             {
@@ -35,6 +35,9 @@ namespace RegularExpressions
                     break;
                 case 6:
                     regular.RulePass();
+                    break;
+                case 7:
+                    regular.CheckEmail();
                     break;
             }
             

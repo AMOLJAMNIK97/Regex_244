@@ -129,5 +129,26 @@ namespace RegularExpressions
                 Console.ResetColor();
             }
         }
+
+        Regex email = new Regex("^[a-zA-Z0-9]+([._+-][a-zA-Z0-9]+)*@[a-zA-Z0-9]+.[a-zA-Z]{2,4}([.][a-zA-Z]{2,})?$");
+        public void CheckEmail()
+        {
+            Console.WriteLine("Enter PassWord ");
+            var data = Console.ReadLine();
+
+            if (Rule4.IsMatch(data))
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine(data + " is Valid");
+                Console.ResetColor();
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine(data + " is Not Valid");
+                Console.ResetColor();
+            }
+        }
     }
+    
 }
