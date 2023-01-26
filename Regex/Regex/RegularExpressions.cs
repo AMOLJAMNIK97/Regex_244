@@ -109,5 +109,25 @@ namespace RegularExpressions
             }
 
         }
+
+        Regex Rule4 = new Regex("^[A-Z]{1}[a-z]{3,}[#@!$&%][0-9]{3,}");
+        public void RulePass()
+        {
+            Console.WriteLine("Enter PassWord ");
+            var data = Console.ReadLine();
+
+            if (Rule4.IsMatch(data))
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine(data + " is Valid");
+                Console.ResetColor();
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine(data + " is Not Valid");
+                Console.ResetColor();
+            }
+        }
     }
 }
